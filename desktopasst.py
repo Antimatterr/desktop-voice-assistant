@@ -47,8 +47,7 @@ def takeCommand():
 	return query
 
 if __name__=='__main__':
-	wishme()
-	#logic to execute task based on query 
+	wishme()#logic to execute task based on query 
 	while True:
 		query = takeCommand().lower()
 		if 'wikipedia' in query:
