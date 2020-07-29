@@ -45,7 +45,6 @@ def takeCommand():
 		print("Say that again please")
 		return "None"
 	return query
-
 if __name__=='__main__':
 	wishme()#logic to execute task based on query 
 	while True:
