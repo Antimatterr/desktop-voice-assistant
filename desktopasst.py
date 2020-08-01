@@ -57,14 +57,18 @@ if __name__=='__main__':
 			speak(results)
 		elif 'open youtube' in query:
 			webbrowser.get('chrome').open("https://www.youtube.com")
+			speak("Anything else sir?")
 		elif 'open quora' in query:
 			webbrowser.get('chrome').open("https://www.quora.com")
+			speak("Anything else sir?")
 		elif 'stackoverflow' in query:
 			webbrowser.get('chrome').open("https://www.stackoverflow.com")
+			speak("Anything else sir?")
 		elif 'google' in query:
 			query = query.replace("google","")
 			for j in search(query,tld="co.in", num=1, stop=1, pause=3):
 				webbrowser.get('chrome').open(j)
+			speak("Anything else sir?")
 		elif 'play music' in query:
 			music_dir = 'D:\Music'
 			songs=os.listdir(music_dir)
@@ -72,23 +76,29 @@ if __name__=='__main__':
 			num_of_songs = len(songs)
 			i = random.randint(0,num_of_songs-1)
 			os.startfile(os.path.join(music_dir,songs[i]))
+			speak("Anything else sir?")
 		elif 'time' in query:
 			strTime = datetime.datetime.now().strftime("%H:%M")
 			speak(f"sir the time is{strTime}")
+			speak("Anything else sir?")
 		elif 'open code' in query:
 			codepath = 'C:\\Users\\SID\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe'
 			os.startfile(codepath)
+			speak("Anything else sir?")
 		elif 'open soup' in query:
 			webbrowser.get('chrome').open("https://web.whatsapp.com/")
+			speak("Anything else sir?")
 		elif 'open git' in query:
 			gitpath = 'C:\\Program Files\\Git\\git-bash.exe'
 			os.startfile(gitpath)
+			speak("Anything else sir?")
 		elif 'create folder' in query:
 			speak("what is your folder name")
 			directory = takeCommand()
 			parent_dir = "D:\\Python Files"
 			path = os.path.join(parent_dir, directory)
 			os.makedirs(path)
-			new_parent_dir = f"D:\\Python Files\\{directory}" 
+			new_parent_dir = f"D:\\Python Files\\{directory}"
+			speak("Anything else sir?") 
 		elif 'stop' in query:
 			exit()
