@@ -28,7 +28,7 @@ def wishme():
 	else:
 		speak("good night")
 
-	speak("hello sid i am networm, how may i help you")
+	speak("hello sid i am networm, how may i help youu")
 
 def takeCommand():
 	#take command from the user 
@@ -59,7 +59,7 @@ if __name__=='__main__':
 			webbrowser.get('chrome').open("https://www.youtube.com")
 		elif 'open quora' in query:
 			webbrowser.get('chrome').open("https://www.quora.com")
-		elif 'stack overflow' in query:
+		elif 'stackoverflow' in query:
 			webbrowser.get('chrome').open("https://www.stackoverflow.com")
 		elif 'google' in query:
 			query = query.replace("google","")
@@ -83,5 +83,12 @@ if __name__=='__main__':
 		elif 'open git' in query:
 			gitpath = 'C:\\Program Files\\Git\\git-bash.exe'
 			os.startfile(gitpath)
+		elif 'create folder' in query:
+			speak("what is your folder name")
+			directory = takeCommand()
+			parent_dir = "D:\\Python Files"
+			path = os.path.join(parent_dir, directory)
+			os.makedirs(path)
+			new_parent_dir = f"D:\\Python Files\\{directory}" 
 		elif 'stop' in query:
 			exit()
